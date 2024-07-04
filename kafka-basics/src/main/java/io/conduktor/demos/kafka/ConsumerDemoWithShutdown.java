@@ -78,6 +78,5 @@ public class ConsumerDemoWithShutdown {
             consumer.close(); //close the consumer and this will also commit the offset
             log.info("The consumer is now gracefully shutdown");
         }
-
     }
 }
