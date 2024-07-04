@@ -61,13 +61,12 @@ public class ConsumerDemoWithShutdown {
 
             //poll for data
             while (true) {
-                log.info("Polling");
 
                 ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(1000));
 
                 for (ConsumerRecord<String, String> record : records) {
                     log.info("Key: " + record.key() + " value: " + record.value());
-                    log.info("Partition: " + record.partition() + "Offset: " + record.offset());
+                    log.info("Partition: " + record.partition() + " Offset: " + record.offset());
                 }
             }
         } catch (WakeupException e) {

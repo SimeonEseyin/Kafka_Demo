@@ -51,7 +51,7 @@ public class ConsumerDemo {
 
             for (ConsumerRecord<String, String> record : records) {
                 log.info("Key: " + record.key() + " value: " + record.value());
-                log.info("Partition: " + record.partition() + "Offset: " + record.offset());
+                log.info("Partition: " + record.partition() + " Offset: " + record.offset());
             }
         }
     }
